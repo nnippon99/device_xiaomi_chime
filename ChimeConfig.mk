@@ -85,9 +85,6 @@ TARGET_DISABLE_POSTRENDER_CLEANUP := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-
 # HAL
 TARGET_HALS_PATH ?= hardware/qcom-caf/$(TARGET_BOARD_PLATFORM)
 
