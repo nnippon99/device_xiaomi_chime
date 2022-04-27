@@ -307,13 +307,6 @@ service vendor.tlocd /vendor/bin/tloc_daemon
     user system
     group drmrpc gps net_raw
 
-service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   disabled
-   oneshot
-
 service vendor.tcpdump /system/bin/wlantcpdump -i any -W 2 -C 2 -s 134 -w /sdcard/MIUI/debug_log/common/tcpdump.pcap
     class main
     user root
@@ -326,12 +319,6 @@ on property:persist.vendor.tcpdump.enable=true
 
 on property:persist.vendor.tcpdump.enable=false
     stop vendor.tcpdump
-
-on property:persist.vendor.cnss_diag.enable=true
-    start vendor.cnss_diag
-
-on property:persist.vendor.cnss_diag.enable=false
-    stop vendor.cnss_diag
 
 #xiong add charge_logger
 service charge_logger vendor/bin/charge_logger
