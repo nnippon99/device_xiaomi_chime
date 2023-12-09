@@ -169,8 +169,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
-    libsdmutils \
-    libtinyxml
+    libsdmutils
 
 PRODUCT_PACKAGES += \
     libvulkan
