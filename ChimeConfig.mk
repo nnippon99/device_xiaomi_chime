@@ -119,6 +119,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_chime
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
+# Malloc
+MALLOC_SVELTE := true
+
 # Media
 TARGET_USES_ION := true
 
