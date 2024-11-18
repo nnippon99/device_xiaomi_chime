@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 Lilium Project
+# Copyright (C) 2024 Lilium Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
