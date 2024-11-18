@@ -942,4 +942,13 @@
     -->
     <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
 
+    <!-- media controls -->
+    <bool name="config_mediaControlsTurbulenceByDefault">false</bool>
+
+    <!-- Whether to play turbulence noise after clicking the play button -->
+    <bool name="config_turbulenceNoise">false</bool>
+
+    <!-- Unlock ripple animation -->
+    <bool name="config_enableUnlockRippleAnimation">false</bool>
+
 </resources>
