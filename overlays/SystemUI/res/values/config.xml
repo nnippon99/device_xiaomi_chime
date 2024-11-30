@@ -46,4 +46,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
+    <!-- Whether to play turbulence noise after clicking the play button -->
+    <bool name="config_turbulenceNoise">false</bool>
+
+    <!-- Unlock ripple animation -->
+    <bool name="config_enableUnlockRippleAnimation">false</bool>
 </resources>
