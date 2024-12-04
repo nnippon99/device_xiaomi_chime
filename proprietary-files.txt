@@ -93,6 +93,7 @@ vendor/lib/soundfx/libshoebox.so
 
 # Audio HAL
 vendor/lib/libaudio_log_utils.so
+vendor/lib/hw/sound_trigger.primary.bengal.so
 
 # Audio Libraries
 vendor/lib/liba2dpoffload.so
