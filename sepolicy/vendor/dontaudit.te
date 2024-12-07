@@ -34,3 +34,7 @@ dontaudit {
   vendor_netmgrd
   vendor_qti
 } vendor_diag_device:chr_file rw_file_perms;
+
+# Apps are no longer allowed open access to /dev/ashmem, unless they
+# target API level < Q.
+dontaudit untrusted_app ashmem_device:chr_file open;
