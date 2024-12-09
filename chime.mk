@@ -340,12 +340,16 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
+    CertifiedPropsOverlay \
     FrameworksResChime \
     NotchBarKiller \
     SettingsResChime \
     SystemUIResChime \
     TelephonyResChime \
     WifiResCommon
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
