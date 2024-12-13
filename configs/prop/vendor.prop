@@ -184,6 +184,9 @@ ro.hardware.fp.sideCap=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Keystore
 ro.hardware.keystore_desede=true
 
