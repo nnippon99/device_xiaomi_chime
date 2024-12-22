@@ -8,6 +8,9 @@ sys.boot.hwc                                    u:object_r:vendor_camera_prop:s0
 vendor.camera.                                  u:object_r:vendor_camera_prop:s0
 vendor.vidhance.                                u:object_r:vendor_camera_prop:s0
 
+# CNE
+persist.vendor.cne                              u:object_r:vendor_cnd_prop:s0
+
 # DFPS
 persist.vendor.dfps.level                       u:object_r:vendor_display_prop:s0
 persist.vendor.video.dfps.level                 u:object_r:vendor_display_prop:s0
