@@ -39,6 +39,7 @@ persist.dbg.wfc_avail_ovr=1
 
 # Log
 log.tag.CHIUSECASE=ERROR
+persist.log.tag.ACDB-LOADER=S
 persist.log.tag.bt_stack=S
 persist.log.tag.CamX=S
 persist.log.tag.CHIUSECASE=S
