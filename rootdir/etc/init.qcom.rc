@@ -365,6 +365,10 @@ on property:vendor.media.target_variant=*
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
     setprop ro.media.xml_variant.profiles ${vendor.media.target_variant}
 
+# Hardware revision
+on property:ro.boot.hwlevel=*
+    setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
+
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
     user root

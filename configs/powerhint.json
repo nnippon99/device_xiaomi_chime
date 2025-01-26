@@ -126,7 +126,8 @@
       "Name": "TASchedtuneBoost",
       "Path": "/dev/stune/top-app/schedtune.boost",
       "Values": [
-        "1",
+        "10",
+        "30",
         "0"
       ],
       "DefaultIndex": 0,
@@ -208,7 +209,7 @@
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
-      "Value": "1"
+      "Value": "10"
     },
     {
       "PowerHint": "LAUNCH",
