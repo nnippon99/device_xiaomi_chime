@@ -101,8 +101,6 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
-ro.qc.sdk.audio.fluencetype=none
-ro.qc.sdk.audio.ssr=false
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
@@ -198,9 +196,6 @@ ro.hardware.fp.sideCap=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
-
 # HWUI
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
@@ -250,7 +245,6 @@ persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.snapshot_enabled=1
 persist.vendor.radio.snapshot_timer=5
-vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 persist.vendor.radio.enableadvancedscan=true
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
