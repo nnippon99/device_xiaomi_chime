@@ -402,7 +402,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor
 
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -436,19 +435,13 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.class_main.sh \
-    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh \
-    init.qti.media.sh
+    init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
-    init.qcom.factory.rc \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.stnfc.rc \
     init.target.rc \
