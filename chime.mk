@@ -436,8 +436,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.post_boot.sh \
-    init.qcom.usb.sh \
-    usb_compositions.conf
+    init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.power.rc \
@@ -519,8 +518,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti \
-    android.hardware.usb.gadget-service.qti
+    android.hardware.usb-service.qti
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
