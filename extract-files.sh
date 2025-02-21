@@ -71,6 +71,9 @@ function blob_fixup() {
             sed -i "s/0x10080/0/" "${2}"
             sed -i "s/0x1F/0x0/" "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+	    echo 'gettid: 1' >> ${2}
+	    ;;
     esac
 }
 
