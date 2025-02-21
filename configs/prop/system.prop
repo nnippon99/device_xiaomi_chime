@@ -22,6 +22,7 @@ debug.sf.enable_hwc_vds=1
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
+persist.sys.brightness.low.gamma=true
 
 # DPM
 persist.vendor.dpm.feature=1

@@ -123,17 +123,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TASchedtuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "10",
-        "30",
-        "0"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
       "Name": "DoubleTapToWake",
       "Path": "/sys/touchpanel/double_tap",
       "Values": [
@@ -173,13 +162,13 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "2016000"
+      "Value": "9999999"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1804800"
+      "Value": "9999999"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -204,12 +193,6 @@
       "Node": "CPUBWMinFreq",
       "Duration": 0,
       "Value": "4173"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneBoost",
-      "Duration": 0,
-      "Value": "10"
     },
     {
       "PowerHint": "LAUNCH",

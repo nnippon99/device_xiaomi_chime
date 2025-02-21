@@ -130,6 +130,7 @@ function enable_memory_features()
 # Core control is temporarily disabled till bring up
 echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+
 # Core control parameters on big
 echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
@@ -145,9 +146,6 @@ echo 100 > /proc/sys/kernel/sched_group_upmigrate
 # cpuset settings
 echo 0-2     > /dev/cpuset/background/cpus
 echo 0-3     > /dev/cpuset/system-background/cpus
-echo 4-7     > /dev/cpuset/foreground/boost/cpus
-echo 0-2,4-7 > /dev/cpuset/foreground/cpus
-echo 0-7     > /dev/cpuset/top-app/cpus
 
 # configure governor settings for little cluster
 echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -158,10 +156,10 @@ echo 614400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rtg_boost_freq
 
 # configure input boost settings
-echo "0:1401600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
-echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-echo "0:1804800 1:0 2:0 3:0 4:2016000 5:0 6:0 7:0" >  /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-echo 400 >  /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
+#echo "0:1401600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+#echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+#echo "0:1804800 1:0 2:0 3:0 4:2016000 5:0 6:0 7:0" >  /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
+#echo 400 >  /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 # configure governor settings for big cluster
 echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
@@ -182,11 +180,12 @@ echo -6 >  /sys/devices/system/cpu/cpu4/sched_load_boost
 echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
 echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
 echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
-echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
+echo 85 >  /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+echo 85 >  /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
 
 # Set Memory parameters
 configure_memory_parameters
+enable_memory_features
 
 # Enable bus-dcvs
 ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
