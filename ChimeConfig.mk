@@ -108,7 +108,6 @@ BOARD_USES_LEGACY_IMS_SEPOLICY := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):init_chime
-TARGET_RECOVERY_DEVICE_MODULES := libinit_chime
 
 # Malloc
 MALLOC_SVELTE := true
