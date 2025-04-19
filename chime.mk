@@ -130,9 +130,6 @@ PRODUCT_COPY_FILES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# DEX
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := space
-
 # Disable SF configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -463,6 +460,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     $(LOCAL_PATH)/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(LOCAL_PATH)/seccomp/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     $(LOCAL_PATH)/seccomp/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     $(LOCAL_PATH)/seccomp/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy
@@ -478,6 +476,11 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libpiex_shim
+
+# Speed Profiles
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -503,6 +506,9 @@ PRODUCT_BOOT_JARS += \
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
+
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
 
 # USB
 PRODUCT_PACKAGES += \
