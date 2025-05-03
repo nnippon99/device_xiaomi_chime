@@ -84,7 +84,20 @@ function blob_fixup() {
         vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
-            ;; 
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_describe" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_lock" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_release" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_unlock" "${2}"
+        ;; 
+        vendor/lib64/libalLDC.so |\
+        vendor/lib64/libalhLDC.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_allocate" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_describe" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_lock" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_release" "${2}"
+            "${PATCHELF}" --clear-symbol-version "AHardwareBuffer_unlock" "${2}"
+        ;;
         *)
             return 1
             ;;
