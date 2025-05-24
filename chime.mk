@@ -228,7 +228,10 @@ PRODUCT_PACKAGES += \
 # IFAA manager
 PRODUCT_PACKAGES += \
     IFAAService
-    
+
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,libinit_chime)
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -473,6 +476,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Speed Profiles
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
@@ -497,6 +505,9 @@ PRODUCT_BOOT_JARS += \
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
+
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
 
 # USB
 PRODUCT_PACKAGES += \
@@ -534,7 +545,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink \
     firmware_wlan_mac.bin_symlink
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
