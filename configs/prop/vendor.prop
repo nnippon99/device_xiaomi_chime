@@ -146,7 +146,6 @@ debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
 debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.hwui.use_hint_manager=true
-ro.hwui.render_ahead=23
 debug.hwui.target_cpu_time_percent=30
 debug.sf.predict_hwc_composition_strategy=0
 graphics.gpu.profiler.support=true

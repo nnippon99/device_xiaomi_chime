@@ -20,9 +20,6 @@ $(call inherit-product, device/xiaomi/chime/aosp.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Enable whole-program R8 Java optimizations for system_server.
-FULL_SYSTEM_OPTIMIZE_JAVA := true
-
 # Board API level
 BOARD_SHIPPING_API_LEVEL := 30
 
@@ -129,9 +126,6 @@ PRODUCT_COPY_FILES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# DEX
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := space
-
 # Disable SF configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -230,7 +224,7 @@ PRODUCT_PACKAGES += \
     IFAAService
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,libinit_chime)
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_chime)
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -475,11 +469,6 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libpiex_shim
-
-# Speed Profiles
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Telephony
 PRODUCT_PACKAGES += \
