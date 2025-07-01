@@ -104,6 +104,9 @@ USE_OPENGL_RENDERER := true
 # IMS
 BOARD_USES_LEGACY_IMS_SEPOLICY := true
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,init_chime)
+
 # Media
 TARGET_USES_ION := true
 

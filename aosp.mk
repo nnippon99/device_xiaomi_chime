@@ -41,16 +41,3 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Do not build non-GSI partition images.
 PRODUCT_BUILD_DEBUG_BOOT_IMAGE := false
 PRODUCT_BUILD_DEBUG_VENDOR_BOOT_IMAGE := false
-
-
-# Make smaller .tar.gz files by excluding debug targets.
-export ART_BUILD_TARGET_DEBUG=false
-export ART_BUILD_HOST_DEBUG=false
-export USE_DEX2OAT_DEBUG=false
-
-# Hardcode High Memory Parallel Process
-export NINJA_HIGHMEM_NUM_JOBS=1
-
-# Iperf3
-PRODUCT_PACKAGES += \
-    iperf3

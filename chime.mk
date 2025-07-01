@@ -223,9 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_chime)
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
