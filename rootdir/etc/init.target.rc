@@ -56,6 +56,8 @@ on init
 
 on early-fs
     start vold
+    # Enable suspend to idle mode to reduce latency during suspend/resume
+    write /sys/power/mem_sleep "s2idle"
 
 on fs
     start hwservicemanager
