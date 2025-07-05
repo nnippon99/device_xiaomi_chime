@@ -128,7 +128,7 @@ vendor/lib64/libofflinelog.so
 vendor/lib64/libxml2_vendor.so
 
 # Consumer IR
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so;FIX_SONAME
 
 # CDSP - devon
 vendor/bin/cdsprpcd
@@ -359,8 +359,8 @@ vendor/framework/com.fingerprints.extension.jar
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/hw/fingerprint.silead.default.so
-vendor/lib64/hw/focal_fingerprint.default.so
-vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/hw/focal_fingerprint.default.so;FIX_SONAME
+vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
