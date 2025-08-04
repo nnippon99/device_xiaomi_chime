@@ -15,7 +15,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/chime/chime-vendor.mk)
 
 # Inherit some common PixelOS stuff
-$(call inherit-product, device/xiaomi/chime/aosp.mk)
+$(call inherit-product, device/xiaomi/chime/lineage.mk)
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
