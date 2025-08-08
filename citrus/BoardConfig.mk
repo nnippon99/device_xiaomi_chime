@@ -14,3 +14,6 @@ TARGET_OTA_ASSERT_DEVICE := citrus,chime,juice
 
 # Inherit from the proprietary version
 include vendor/xiaomi/citrus/BoardConfigVendor.mk
+
+# Kernel
+TARGET_KERNEL_CONFIG += vendor/xiaomi/citrus.config
