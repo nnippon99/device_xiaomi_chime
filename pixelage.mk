@@ -5,7 +5,7 @@
 #
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -47,12 +47,4 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_BUILD_DEBUG_BOOT_IMAGE := false
 PRODUCT_BUILD_DEBUG_VENDOR_BOOT_IMAGE := false
 
-RISING_MAINTAINER := nippon
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingMaintainer="nippon" \
-    RisingChipset="Snapdragon 662"
-
-TARGET_ENABLE_BLUR := false
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+PIXELAGE_MAINTAINER := Nippon

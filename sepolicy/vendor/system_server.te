@@ -6,7 +6,6 @@ get_prop(system_server, vendor_persist_camera_prop)
 allow system_server system_server:capability { sys_module };
 
 allow system_server proc_buddyinfo:file r_file_perms;
-allow system_server proc_cgroups:file r_file_perms;
 allow system_server proc_diskstats:file r_file_perms;
 allow system_server proc_interrupts:file r_file_perms;
 allow system_server proc_iomem:file r_file_perms;
