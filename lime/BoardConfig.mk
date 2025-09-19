@@ -18,5 +18,3 @@ ODM_MANIFEST_LEMON_FILES := $(DEVICE_PATH)/vintf/manifest_lemon.xml
 
 # Inherit from the proprietary version
 include vendor/xiaomi/lime/BoardConfigVendor.mk
-
-TARGET_KERNEL_CONFIG += vendor/xiaomi/lime.config

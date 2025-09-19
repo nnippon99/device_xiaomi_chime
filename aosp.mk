@@ -5,7 +5,7 @@
 #
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -46,5 +46,5 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Do not build non-GSI partition images.
 PRODUCT_BUILD_DEBUG_BOOT_IMAGE := false
 PRODUCT_BUILD_DEBUG_VENDOR_BOOT_IMAGE := false
-
-PIXELAGE_MAINTAINER := Nippon
+TARGET_HAS_GEMENI_BOOTANIMATION := true
+GMS_VOICE_MODEL_INCLUDED := true

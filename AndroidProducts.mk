@@ -5,13 +5,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelage_citrus.mk \
-    $(LOCAL_DIR)/pixelage_lime.mk
+    $(LOCAL_DIR)/aosp_citrus.mk \
+    $(LOCAL_DIR)/aosp_lime.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixelage_citrus-user \
-    pixelage_citrus-userdebug \
-    pixelage_citrus-eng \
-    pixelage_lime-user \
-    pixelage_lime-userdebug \
-    pixelage_lime-eng
+    aosp_citrus-user \
+    aosp_citrus-userdebug \
+    aosp_citrus-eng \
+    aosp_lime-user \
+    aosp_lime-userdebug \
+    aosp_lime-eng
