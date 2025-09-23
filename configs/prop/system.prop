@@ -1,5 +1,6 @@
 # Blur
 ro.launcher.blur.appLaunch=0
+persist.sys.activity_anim_perf_override=true
 
 # Camera
 persist.vendor.camera.privapp.list=com.android.camera,org.codeaurora.snapcam
@@ -53,6 +54,24 @@ persist.log.tag.ResourcesCompat=S
 persist.log.tag.SYNX-UMD=S
 persist.log.tag.ultrasound_extn=S
 persist.vendor.camera.logInfoMask=false
+persist.log.tag.AnalyticsService=S
+persist.log.tag.KernelCpuUidActiveTimeReader=S
+persist.log.tag.Tracer=S
+persist.log.tag.NearbySharing=S
+persist.log.tag.IntervalStats=S
+persist.log.tag.CompatibilityChangeReporter=S
+persist.log.tag.SQLiteLog=S
+persist.log.tag.wificond=S
+persist.log.tag.b/223498680=S
+persist.log.tag.TrafficStats=S
+persist.log.tag.ContrastColorUtil=S
+persist.log.tag.OpenGLRenderer=S
+persist.log.tag.ConstraintSet=S
+persist.log.tag.QC2V4l2Codec=S
+persist.log.tag.HWUI=S
+persist.log.tag.MediaProvider=S
+persist.log.tag.QC2Buf=S
+persist.log.tag.ContextImpl=S
 
 # LMKD
 ro.lmk.log_stats=false
